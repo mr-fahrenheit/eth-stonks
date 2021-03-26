@@ -3,9 +3,9 @@ async function register() {
     return
   }
   if (!registerDisabled) {
-    const urlParams = new URLSearchParams(window.location.search)
-    const grantBroker = urlParams.get('grantBroker')
-    const betaBroker = betaSigs[userAddr]
+    let urlParams = new URLSearchParams(window.location.search)
+    let grantBroker = urlParams.get('grantBroker')
+    let betaBroker = betaSigs[userAddr]
     if (typeof(betaBroker) != 'undefined') {
       grantBroker = betaBroker
     }
