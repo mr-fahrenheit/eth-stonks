@@ -1,10 +1,10 @@
 # eth stonks
-Created by Mr F
-HTML/CSS and Graphics by Karl
+Created by Mr F\
+HTML/CSS and Graphics by Karl\
 Advanced Solidity by ToCsIcK
 
-<https://ethstonks.finance/>
-<https://discord.gg/mDMyTksceR>
+<https://ethstonks.finance/>\
+<https://discord.gg/mDMyTksceR>\
 <https://t.me/ethstonks>
 
 ## Live Contracts
