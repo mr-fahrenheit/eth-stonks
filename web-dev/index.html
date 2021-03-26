@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="" name="description">
+  <meta name="image" content="https://ethstonks.finance/assets/img/og-image.png">
+  <!-- opengraph image -->
+  <meta property="og:image" content="https://ethstonks.finance/assets/img/og-image.png">
+  <meta property="og:title" content="eth stonks">
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="stonks only go up">
+  <meta property="og:url" content="https://ethstonks.finance/">
+  <!-- Twitter meta -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="https://ethstonks.finance/">
+  <meta name="twitter:title" content="eth stonks">
+  <meta name="twitter:description" content="stonks only go up">
+  <meta name="twitter:image" content="https://ethstonks.finance/assets/img/og-image.png">
+  <!-- favicon files -->
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/favicon/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/favicon/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/favicon/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/favicon/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="assets/favicon/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="assets/favicon/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="assets/favicon/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="assets/favicon/apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="assets/favicon/favicon-196x196.png" sizes="196x196" />
+  <link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="assets/favicon/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="assets/favicon/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="assets/favicon/favicon-128.png" sizes="128x128" />
+  <meta name="application-name" content="&nbsp;" />
+  <meta name="msapplication-TileColor" content="#002b93" />
+  <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+  <meta name="msapplication-square70x70logo" content="assets/favicon/mstile-70x70.png" />
+  <meta name="msapplication-square150x150logo" content="assets/favicon/mstile-150x150.png" />
+  <meta name="msapplication-wide310x150logo" content="assets/favicon/mstile-310x150.png" />
+  <meta name="msapplication-square310x310logo" content="assets/favicon/mstile-310x310.png" />
+  <meta name="theme-color" content="#181a18">
+  <title>eth stonks</title>
+  <!-- Bootstrap core CSS -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="assets/css/all.min.css" rel="stylesheet">
+  <script src="assets/js/jquery-3.4.1.slim.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <!-- Custom styles -->
+  <link href="assets/css/jumbotron-narrow.css" rel="stylesheet">
+  <link href="assets/css/custom.css" rel="stylesheet">
+  <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+  <link href="assets/fonts/fonts.min.css" rel="stylesheet" type="text/css">
+  <!-- JS Libs -->
+  <script src="assets/js/web3.min.js"></script>
+  <script src="assets/js/plotly-latest.min.js"></script>
+  <script src="assets/js/bignumber.min.js"></script>
+  <!-- Javascript -->
+  <script src="assets/js/betasigs.js?v=1"></script>
+  <script src="assets/js/abis.js?v=1"></script>
+  <script src="assets/js/hof.js?v=1"></script>
+  <script src="assets/js/main.js?v=1"></script>
+  <script src="assets/js/stonkchart.js?v=1"></script>
+  <script src="assets/js/stats.js?v=1"></script>
+  <script src="assets/js/transactions.js?v=1"></script>
+  <script src="assets/js/formatting.js?v=1"></script>
+</head>
+
+<body>
+  
+  <div class="alert" style="display:none;">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    <h4 style="font-weight: 700; text-align: center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="walletStatus">ethereum wallet not found</span></h4>
+  </div>  
+  <!-- New Tutorial -->
+  <div id="tutorialModals">
+  <div class="modal" id="tutorial" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+    <div class="modal-dialog" role="document" style="margin-top:10px;">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="background"
+            style="background-image: url(assets/img/lern.png);background-position: center; background-size: cover;">
+            <img alt="trx" height="160" src="assets/img/memeguy.png" width="auto"
+              style="margin: 15px 80px 15px auto; overflow: hidden;">
+          </div>
+          <a id="tutBtn1" href="#beginner" data-toggle="modal" data-target="#beginner" class="btn btn-active"
+            onclick="readTutorial(1)" role="button"
+            style="width:100%; font-size: 20px;margin-top:13px;margin-bottom: 0;padding-top:12px">how to play</a>
+          <a id="tutBtn2" href="#stonks" data-toggle="modal" data-target="#stonks" class="btn btn-active"
+            onclick="readTutorial(2)" role="button"
+            style="width:100%; font-size: 20px;margin-top:13px;margin-bottom: 0;padding-top:12px">stonks</a>
+            <a id="tutBtn3" href="#stonkbrokers" data-toggle="modal" data-target="#stonkbrokers" class="btn btn-active"
+            onclick="readTutorial(3)" role="button"
+            style="width:100%; font-size: 20px;margin-top:13px;margin-bottom: 0;padding-top:12px">stonkbrokers</a>
+          <a id="tutBtn4" href="#marketBehavior" data-toggle="modal" data-target="#marketBehavior" class="btn btn-active"
+            onclick="readTutorial(4)" role="button"
+            style="width:100%; font-size: 20px;margin-top:13px;margin-bottom: 0;padding-top:12px">market behavior</a>
+          <a id="tutBtn5" href="#circuitBreakers" data-toggle="modal" data-target="#circuitBreakers" class="btn btn-active"
+            onclick="readTutorial(5)" role="button"
+            style="width:100%; font-size: 20px;margin-top:13px;margin-bottom: 0;padding-top:12px">round mechanics</a>
+          <button id="closeTutorial" data-dismiss="modal" type="button" class="btn btn-lg btn-sell"
+            style="margin-top:13px">ok whatever</button>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NFT Modal -->
+  <div class="modal" id="stonksNFT" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body" style="max-width:38em;margin:0 auto;">
+          <p>
+            a $100+ pre-market buy earns a stonks guy<br>a $100+ main market buy earns a stonks wojak<br>
+          </p>
+          <p>
+            nfts are only minted during the first round<br>
+            one of each per player<br>
+            features your name and number
+          </p>
+          <p>
+        <img alt="trx" height="160" src="assets/img/memeguy_flipped.png" width="auto" style="margin: 24px auto;"><br>
+        pre-market #0 - MrF</p>
+         <p>
+          <img alt="trx" height="160" src="assets/img/spender2.png" width="auto" style="margin: 24px auto;"><br>
+          main market #69 - dickbutt420</p>
+
+        </div>
+        <button data-dismiss="modal" type="button" class="btn btn-active"
+          style="width:100%; font-size: 20px;margin-top:13px;margin-bottom: 0;">I can't wait to spend $100+</button>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- beginner Modal -->
+  <div class="modal" id="beginner" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body" style="max-width:38em;margin:0 auto;">
+          <h2 >how to play</h2><br>
+          <p style="text-align: left">
+            <span >to play eth stonks, you'll need to:</span><br>
+            <span ><b>1)</b> install</span>&nbsp;<a href="https://metamask.io/"><img height="50"
+                src="assets/img/metamask.png"></a> or another ethereum wallet<br>
+            <span ><b>2)</b> buy some <b>ETH</b> from an</span> <a href="https://coinmarketcap.com/currencies/ethereum/markets/"
+              target="blank" >exchange</a><br>
+            <span ><b>3)</b> withdraw the <b>ETH</b> to your new wallet</span><br>
+            <span ><b>4)</b> get some <b>USDT</b> from <b>Uniswap</b></span><br><br>
+            <span >once you have some <b>USDT</b>:</span><br>
+
+            <span ><b>1)</b> register a <b>username</b></span><br>
+            <span ><b>2)</b> buy <b>companies</b> to start producing <b>stonks</b></span><br>
+            <span ><b>3)</b> sell or invest your <b>stonks</b></span><br>
+          </p>
+        </div>
+        <button data-dismiss="modal" type="button" class="btn btn-active"
+          style="width:100%; font-size: 20px;margin-top:13px;margin-bottom: 0;">roger</button>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- stonks Modal -->
+  <div class="modal" id="stonks" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body" style="max-width:32em;margin:0 auto;">
+          <h2>stonks</h2>
+          <div class="background" style="background-image: url();background-position: center;">
+            <img height="150" src="assets/img/factory.gif" width="auto" style="margin: 20px auto;">
+          </div>
+          <p style="text-align: left">
+            <span >- companies can be bought for USDT</span><br>
+            <span >- each company produces 1 stonk per second</span><br>
+            <span >- companies cannot be sold</span><br>
+            <span >- stonks can be sold for USDT</span><br>
+            <span >- stonks can be invested into new companies</span><br>
+          </p>
+        </div>
+        <button data-dismiss="modal" type="button" class="btn btn-active"
+          style="width:100%; font-size: 20px;margin-top:13px;margin-bottom: 0;">i'm following so far</button>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- stonkbrokers Modal -->
+  <div class="modal" id="stonkbrokers" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body" style="max-width:38em;margin:0 auto;">
+          <h2 >stonkbrokers</h2><br>
+          <p style="text-align: left">
+            <span >buy with a stonkbroker to get 5% cashback!</span><br><br>
+            <span >to use a stonkbroker you must visit their link, e.g:<br> <a href="https://ethstonks.finance/#/MrF">https://ethstonks.finance/#/MrF</a></span><br><br>
+            <span >to become a stonkbroker you must spend $1000+ during a round or be granted special access</span><br><br>
+            <span >stonkbrokers receive 5% from referred buys and 10% cashback for their own buys, including the first buy that qualifies</span>
+          </p>
+        </div>
+        <button data-dismiss="modal" type="button" class="btn btn-active"
+          style="width:100%; font-size: 20px;margin-top:13px;margin-bottom: 0;">thanks</button>
+        <div class="modal-footer"></div>
+      </div>
+    </div>
+  </div>
+  <!-- market behavior modal-->
+  <div class="modal" id="marketBehavior" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body" style="max-width:32em;margin:0 auto;">
+          <h2 id="" >market behavior</h2>
+          <div class="background" style="background-image: url();background-position: center;">
+            <img alt="trx" height="160" src="assets/img/graph.gif" width="auto" style="margin: 15px auto;">
+          </div>
+          <h4 class="greentext">buying increases stonk value</h4>
+          <p><span >funds added + minor inflation</span></p>
+          <h4 class="yellowtext">reinvesting preserves stonk value</h4>
+          <p><span >funds unchanged + no inflation</span></p>
+          <h4 class="redtext">sells decrease stonk value</h4>
+          <p><span >funds removed + major inflation</span></p>
+        </div>
+        <button data-dismiss="modal" type="button" class="btn btn-active"
+          style="width:100%; font-size: 20px;margin-top:13px;margin-bottom: 0;">you lost me but okay</button>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- round mechanics modal -->
+  <div class="modal" id="circuitBreakers" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body" style="max-width:38em;margin:0 auto;">
+          <h2 >round mechanics</h2>
+          <div class="background"
+            style="background-image: url(assets/img/circuit.gif);background-position: center; height: 190px; background-size: contain;">
+            <img alt="CIRCUIT BREAKER" height="160" src="assets/img/circuit.gif" width="auto"
+              style="margin: 15px auto;">
+          </div>
+          <p style="text-align: left; margin-bottom: 3px;">
+            <span >the <b>market</b> can hit up to 3 <b>circuit breakers</b></span><br>
+            <span >each <b>circuit breaker</b> awards 7 <b>bailouts</b>:</span>
+          </p>
+          <p style="margin-left: 20px;text-align: left">
+            - <span >biggest spender</span><br>
+            - <span >biggest producer</span><br>
+            - <span >last 5 buys</span><br>
+          </p>
+          <p style="text-align: left">
+            <span >however, if the <b>market crash</b> timer runs out then the <b>bailout fund</b> goes to the <b>stonk fund</b> and the round is over</span>
+          </p>
+        </div>
+        <button data-dismiss="modal" type="button" class="btn btn-active"
+          style="width:100%; font-size: 20px;margin-top:13px;margin-bottom: 0;">that is pretty cool</button>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- hall of fame modal -->
+  <div class="modal" id="halloffame" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content mobile-pad"
+        style="background: rgb(255,225,135);
+        background: linear-gradient(180deg, rgba(255,225,135,1) 0%, rgba(135,87,27,1) 65%, rgba(182,143,70,1) 100%);">
+        <div class="modal-header">
+          <h5 class="modal-title" id="" style="color: #5d401b; font-weight:700!important;text-shadow: none;">bailout hall of fame</h5>
+        </div>
+        <div class="modal-body gold" style="padding: 0">
+          <div class="col-md-12" style="padding: 2px">
+            <div style="display: flex; justify-content: space-between; width: 100%; padding: 20px 15px 15px 15px;">
+              <button id="hofB" onclick="hofBack()" disabled type="button" class="btn btn-lg btn-gold"
+                style="width: 30px; height: 30px;padding: 0 0 2px 0px">
+              &#8249;
+              </button>
+              <h5 style="color: #e1b874; font-size: 17px;text-shadow: none;padding-top: 5px">round <span
+                id="hofRound">1</span></h5>
+              <button id="hofF" onclick="hofForward()" type="button" class="btn btn-lg btn-gold"
+                style="width: 30px; height: 30px;padding: 0 0 2px 0px">
+              &#8250;
+              </button>
+            </div>
+            <div class="gold-tables" id="style-2" style="margin-bottom: 15px">
+              <div class="gold-table" style="display:none;">
+                <h2 style="margin-top: 20px"><b>legituser92</b></h2>
+                <h2 style="color: #4b2b00!important;font-weight: 400">$12,321.32</h2>
+                <table class="table fame3" style="width:100%;">
+                  <tr>
+                    <th style="padding: 10px 0 12px 0">TYPE</th>
+                    <th style="padding: 10px 0 12px 0">BREAKER</th>
+                    <th style="padding: 10px 0 12px 0">AMOUNT</th>
+                  </tr>
+                  <tr>
+                    <td>SPENDER</td>
+                    <td>1</td>
+                    <td>$2,000.00</td>
+                  </tr>
+                  <tr>
+                    <td>SPENDER</td>
+                    <td>2</td>
+                    <td>$1,000.00</td>
+                  </tr>
+                  <tr>
+                    <td>PROD</td>
+                    <td>2</td>
+                    <td>$500.00</td>
+                  </tr>
+                </table>
+                <table class="table fame3" style="width:100%;">
+                  <tr>
+                    <th>SPENT</th>
+                    <th>EARNED</th>
+                    <th>PROFIT</th>
+                  </tr>
+                  <tr>
+                    <td>$20,030</td>
+                    <td>$10</td>
+                    <td>-$7,418</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer" style="padding:15px;border-radius: 5px;">
+            <button data-dismiss="modal" type="button" class="btn btn-lg btn-gold" style="">
+            EXIT
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header" style="">
+          <a class="navbar-brand" style="display: flex" href="/">eth stonks</a>
+        </div>
+        <div class="mobile-align" style="display: flex;justify-content: center">
+          <div class="table" style="display: flex;">
+            <ul class="nav navbar-nav navbar-right font-weight-normal">
+              <li>
+                <a class="social-pad" href="https://twitter.com/MrFwashere" target="blank">
+                  <img alt="twitter" class="social-icons" src="assets/img/social-icons/twitter.png">
+                  <span class="hide-mobile"></span></a>
+              </li>
+              <li>
+                <a class="social-pad" href="https://t.me/ethstonks" target="blank">
+                  <img alt="telegram" class="social-icons" src="assets/img/social-icons/telegram.svg">
+                  <span class="hide-mobile"></span></a>
+              </li>
+              <li>
+                <a class="social-pad" href="https://discord.gg/fjwV7xP4tZ" target="blank">
+                  <img alt="discord" class="social-icons" src="assets/img/social-icons/discord.svg">
+                  <span class="hide-mobile"></span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade active in" role="tabpanel" id="home" aria-labelledby="shrimp-tab">
+          <div class="jumbotron">
+            <section class="accordion">
+              <section class="accordion-content">
+                <div class="graphOverlay">
+                  <div id="text" style="top:65%;">
+                    <h4 style="font-weight:700;margin-top: 15px;margin-bottom: 110px;"><span >loading chart</span></h4>
+                  </div>
+                </div>
+                <article class="accordion-item accordion-active" data-actab-group="1" data-actab-id="2">
+                  <div class="accordion-item__container">
+                    <div class="row">
+                      <div class="col-sm-12 settings" style="display: flex; justify-content: space-around">
+                        <button id="liveFundBtn" type="button" class="btn btn-active" data-toggle="fund" data-target=""
+                          value="fund" onclick="setLiveMetric('fund')"><span >fund</span></button>
+                        <button id="livePriceBtn" type="button" class="btn btn-inactive" data-toggle="price"
+                          data-target="" value="price" onclick="setLiveMetric('price')"><span >price</span></button>
+                        <button id="liveMarketBtn" type="button" class="btn btn-inactive" data-toggle="market"
+                          data-target="" value="market" onclick="setLiveMetric('market')"><span >market</span></button>
+                      </div>
+                    </div>
+                    <div id="stonkChart" class="chart">
+                    </div>
+                    <div id="livePriceSettings" class="col-md-12 settings">
+                      <div class="" style="height: 100px; width: 50%">
+                        <h4 style=""><span id="livePriceCandleSpan">50</span> candles</h4>
+                        <div class="number-input md-number-input" style="  padding: 7px 20px;">
+                          <input id="livePriceCandles" class="slider" min="5" max="200" name="quantity" value="50"
+                                 type="range" oninput="drawTime()">
+                        </div>
+                      </div>
+                      <div class="" style="height: 100px; width: 50%">
+                        <h4 style=""><span id="livePriceDensitySpan">5m</span></h4>
+                        <div class="number-input md-number-input" style="  padding: 7px 20px;">
+                          <input id="livePriceDensity" class="slider" min="1" max="8" name="quantity" value="1"
+                                 type="range" oninput="drawTime()">
+                        </div>
+                      </div>
+                    </div>
+                    <div id="liveFundSettings" class="col-md-12 settings" style="display:none;">
+                      <div class="" style="height: 100px; width: 50%">
+                        <h4 style=""><span id="liveFundCandleSpan">50</span> candles</h4>
+                        <div class="number-input md-number-input" style="  padding: 7px 20px;">
+                          <input id="liveFundCandles" class="slider" min="5" max="200" name="quantity" value="50"
+                            type="range" oninput="drawTime()">
+                        </div>
+                      </div>
+                      <div class="" style="height: 100px; width: 50%">
+                        <h4 style=""><span id="liveFundDensitySpan">5m</span></h4>
+                        <div class="number-input md-number-input" style="  padding: 7px 20px;">
+                          <input id="liveFundDensity" class="slider" min="1" max="8" name="quantity" value="1"
+                            type="range" oninput="drawTime()">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </section>
+            </section>
+            <div class="container-fluid altcolor" style="background: linear-gradient(0deg, #090e33 0%, #1d266b 100%);">
+              <a id="tutBtn" href="#tutorial" data-toggle="modal" data-target="#tutorial" class="btn btn-active btn-bank"
+                onclick="" role="button"
+                style="width: 100%;font-size: 22px!important; padding-top: 12px;margin-bottom:15px;color: #e1fecc!important;"
+                stupid-fake-attribute="none">tutorials</a>
+              <a id="" href="/whitepaper" class="btn btn-buy btn-whitepaper" role="button"
+                style="">whitepaper</a>
+              <a class="btn btn-lg btn-gold" data-toggle="modal" data-target="#halloffame" role="button"
+              style="padding-top:12px;margin-bottom:15px">hall of fame</a>
+            </div>
+            <div class="container featuredBanner" style="padding: 0 15px 0 15px">
+              <div class="featured">
+                <h4  style="font-weight: 700">use a stonkbroker for 5% cashback!</h4>
+                <h5 style="color: #fff;text-shadow: none"><span >featured broker:</span> <a id="featuredLink" href=""
+                    style="color: #f1b856">-</a></h5>
+              </div>
+              <div class="wave-bottom">
+              </div>
+            </div>
+            <!-- premarket -->
+            <div id="premarket-container" class="container" style="padding:0px 14px 0 14px;display: none">
+              <div class="row">
+                <div class="col-md-6 right">
+                  <div class="premarket">
+                    <div class="premarketlights">
+                      <div class="sunny">
+                        <h3  style="padding-top:30px; margin-bottom: 4px;color: white;">pre-market ends</h3>
+                        <h2 id="pmCountdown" class="glowing-text"
+                          style="margin-top: 0;padding-top: 30px; line-height: 20px">-</h2>
+                        <h4  style="padding-top:30px;color: #799fff;font-weight: 700">total spent</h4>
+                        <h3 id="pmSpentTotal" style="color: white;padding-bottom:20px;font-weight: 700">-</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 left">
+                  <div class="premarket">
+                    <div class="premarketlights2">
+                      <div class="fireworks">
+                        <div style="padding:25px">
+                          <div class="pmNameOverlay">
+                            <div id="text">
+                              <h4 style="font-weight:700;margin-bottom: 80px;"><i class="fas fa-lock lock"
+                                  style="margin-bottom: 15px"></i><span >username required</span></h4>
+                            </div>
+                          </div>
+                          <div id="pmBrokerWarning">
+                            <div id="text">
+                              <p style="font-size: 16px; padding: 0 20px;">
+                                <span >no broker detected<br>you will miss out on 5% cashback</span></p>
+                                <a class="btn btn-active" onclick="useFeatured()" role="button"
+                                style=" margin: 7px auto 0 auto;padding-top: 12px;width: 100%;">use featured</a>
+                                <a class="btn btn-active" onclick="iDontCare()" role="button"
+                                style=" margin: 7px auto 0 auto;padding-top: 12px;width: 100%;">I don't care</a>
+                            </div>
+                          </div>
+                          <div class="pmApprovalOverlay" style="display: none;">
+                            <div id="text">
+                              <a class="btn btn-active" onclick="approveGame()" role="button"
+                                style="margin: auto;padding-top: 12px; font-size: 13px;width: 100%;">approval required</a>
+                            </div>
+                          </div>
+                          <h3  style="padding-top:0px; margin-bottom: 4px;color: white;">pre-market buy</h3>
+                          <div class="spend-input" style="margin-bottom: 20px!important;padding-top: 25px">
+                            <input id="pmBuyInput" autocomplete="off"
+                              style="border-radius: 7px 0 0 7px!important; border-right: none; width: calc(100% - 100px);"
+                              type="text" class="form-control" placeholder="100" maxlength="32"
+                              onkeyup="this.value = this.value.replace(/[^\.|0-9]/, '')" onkeydown="" />
+                            <div class="input-group-append" style="padding: 0">
+                              <span class="input-group-text">USDT&nbsp;<img src="assets/img/tethericon.png" height="16"
+                                  style="display: inline-flex!important;margin-top: -3px" /></span>
+                            </div>
+                          </div>
+                          <a class="btn btn-lg btn-buy" onclick="pmBuy()" role="button" 
+                          style="padding-bottom: 30px">buy</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- registration -->
+            <div class="container buy-contain-full" id="refSignup">
+              <div class="row lr-pad">
+                <div class="col-md-4 buy-contain-left"
+                  style="background-image: url(assets/img/floor.png);background-position: center;">
+                  <img alt="trx" height="160" src="assets/img/spender2.png" width="auto" style="margin: 12px auto;">
+                </div>
+                <div class="col-md-8 referralinfo">
+                  <div class="spend-input">
+                    <input type="text" style="font-size: 16px; text-align: center; height: 60px;" class="form-control"
+                      id="inputName" placeholder="3-12 letters/numbers, no spaces" maxlength="12"
+                      onkeyup="resetCheck()" />
+                  </div>
+                  <a class="btn btn-lg btn-buy" id="checkNameBtn" role="button"
+                    style="color: #ffffff!important; background-color: #0f1647; border: 3px solid #0f1647; margin-top:11px">enter a name to check</a>
+                  <a class="btn btn-lg btn-buy" id="registerNameBtn" disabled="true" onclick="register()" role="button"
+                    style="color: #fff!important;background-color: #2c3893; border: 3px solid #2c3893;margin-top:11px">register</a>
+                </div>
+              </div>
+            </div>
+            <div class="container buy-contain-full">
+              <div class="row lr-pad orders" style="display: flex">
+                 <div class="col-md-8 order1 broker" style="flex-direction: column; padding:0; padding-right:15px;">
+                    <h2 style="padding: 0;">eth stonks nfts</h2>
+                    <h5 style="margin-top: 25px;margin-bottom:11px;">rare nft during the first pre-market!</h5>
+                    <h5 style="margin-bottom:25px;">less rare nft during the first main market!</h5>
+                    <a class="btn btn-lg btn-buy" href="#stonksNFT" data-toggle="modal" data-target="#stonksNFT" onclick="" role="button" style="color: #9fa9f3!important;background-color: #1e2660; border: 3px solid #1e2660;margin-top:13px">
+                    tell me more
+                    </a>
+                 </div>
+                 <div class="col-md-4 buy-contain-left order2" style="background-image: url(assets/img/floor.png);background-position: center;">
+                    <img alt="trx" height="160" src="assets/img/memeguy_flipped.png" width="auto" style="margin: 24px auto;">
+                 </div>
+              </div>
+           </div>
+            <!-- Purchase & timer -->
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6 crash right">
+                  <div class="col-md-12 round options" style="padding: 0px 30px; height: 304px;">
+                    <div class="premarketOverlay">
+                      <div id="text" style="top:65%;">
+                        <i class="fas fa-lock lock" style="margin-top: 0px;"></i>
+                        <h4  style="font-weight:700;margin-top: 15px;margin-bottom: 110px;">pre-market</h4>
+                      </div>
+                    </div>
+                    <h2 class="glowing-text"
+                      style="color: #ffffff; padding-top:30px; padding-bottom:20px;font-weight:700;font-size: 3em"><span >round</span>
+                      <span class="currentRound">1</span>
+                    </h2>
+                    <div style="position: relative; display: block;">
+                      <h3 class="market">&nbsp;&nbsp;<span >market crash</span></h3>
+                      <ul style="padding-bottom:0px;height:75px; margin-bottom: 30px">
+                        <li><span id="hours">72</span><span >hours</span></li>
+                        <li><span id="minutes">00</span><span >minutes</span></li>
+                        <li><span id="seconds">00</span><span >seconds</span></li>
+                      </ul>
+                    </div>
+                    <h5><span >timer increment</span><br /><span id="timerIncr" style="color: #fff;">30 </span>
+                      <span  style="color: #fff;">minutes per USDT spent</span>
+                    </h5>
+                  </div>
+                </div>
+                <!-- last 5 buyers -->
+                <div class="col-md-6 left">
+                  <div class="col-md-12 green options">
+                    <h3 style="padding-top: 0x;padding-bottom: 0px;"><span >circuit breaker</span> #<span id="cbNum">-</span></h3>
+                    <h2 id="cbAmount" class="glowing-text"
+                      style="margin-top: 20px;padding-bottom: 22px; line-height: 20px;font-size: 25px">-</h2>
+                    <div class="percent">
+                      <div class="percent-bar" data-per="1"></div>
+                    </div>
+                    <h3  style="padding-top: 0x;padding-bottom: 0px;">stonk market</h3>
+                    <h2 id="stonkMarket" class="glowing-text"
+                      style="margin-top: 20px;padding-bottom: 0px; line-height: 20px;font-size: 25px">-</h2>
+                    <h5
+                      style="position: absolute; bottom: 141px; left: calc(46% - 10px);text-shadow: -1px -1px 0 #090f34, 1px -1px 0 #090f34, -1px 1px 0 #090f34, 1px 1px 0 #090f34; padding-top: 0px;padding-bottom: 0px; color: #fff; font-size: 20px;">
+                      <span id="cbPerc">-</span>%
+                    </h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6 right">
+                  <div class="col-md-12 fed2 options" style="background-position: center;padding:30px">
+                    <div class="stonk-fund" style="position: relative;height:125px;">
+                      <h3 style="margin-bottom: 4px;color: white;">&nbsp;&nbsp;<span >stonk fund</span></h3>
+                      <h2 class="reserve" id="stonkFund">-</h2>
+                    </div>
+                    <div class="fed" style="position: relative;height:125px;">
+                      <h3 style="padding-top:10px; margin-bottom: 4px;color: white;">&nbsp;&nbsp;<span >bailout fund</span></h3>
+                      <h2 class="reserve" id="bailoutFund">-</h2>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 left">
+                  <div class="col-md-12 green2 options" style="height: 313px;">
+                    <h3 >last 5 buys</h3>
+                    <table class="table recent" style="width:100%; margin-bottom: 10px; margin-top: 10px">
+                      <tr>
+                        <th >user</th>
+                        <th >broker</th>
+                        <th >value</th>
+                      </tr>
+                      <tr>
+                        <td id="buyer1">-</td>
+                        <td id="broker1">-</td>
+                        <td id="value1" class="greentext">-</td>
+                      </tr>
+                      <tr>
+                        <td id="buyer2">-</td>
+                        <td id="broker2">-</td>
+                        <td id="value2" class="greentext">-</td>
+                      </tr>
+                      <tr>
+                        <td id="buyer3">-</td>
+                        <td id="broker3">-</td>
+                        <td id="value3" class="greentext">-</td>
+                      </tr>
+                      <tr>
+                        <td id="buyer4">-</td>
+                        <td id="broker4">-</td>
+                        <td id="value4" class="greentext">-</td>
+                      </tr>
+                      <tr>
+                        <td id="buyer5">-</td>
+                        <td id="broker5">-</td>
+                        <td id="value5" class="greentext">-</td>
+                      </tr>
+                    </table>
+                    <h5><span >next bailout</span>: <span id="last5" style="color: #fff;">-</span> <span >each</span></h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Bailouts-->
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6 right">
+                  <div class="col-md-12 options"
+                    style="background-image: url(assets/img/factorybg.png);background-position: center;padding:30px">
+                    <h3>
+                      <span >biggest producer</span>
+                      <p style="padding: 10px"><b id="biggestProdName">-</b></p>
+                    </h3>
+                    <div style="height: 120px">
+                      <img id="frame1" height="120" src="assets/img/anim/frame1.jpg" width="auto"
+                        style="border-radius: 10px; position:absolute;left: calc(50% - 60px);">
+                      <img id="frame2" height="120" src="assets/img/anim/frame2.jpg" width="auto"
+                        style="border-radius: 10px; position:absolute;left: calc(50% - 60px);">
+                      <img id="frame3" height="120" src="assets/img/anim/frame3.jpg" width="auto"
+                        style="border-radius: 10px; position:absolute;left: calc(50% - 60px);">
+                      <img id="frame4" height="120" src="assets/img/anim/frame4.jpg" width="auto"
+                        style="border-radius: 10px; position:absolute;left: calc(50% - 60px);">
+                      <img id="frame5" height="120" src="assets/img/anim/frame5.jpg" width="auto"
+                        style="border-radius: 10px; position:absolute;left: calc(50% - 60px);">
+                    </div>
+                    <h5 style="padding-top:15px">
+                      <span >companies</span>:
+                      <span id="biggestProdComp" style="color: white; font-weight: 700">-</span>
+                    </h5>
+                    <h5>
+                      <span >stonks</span>:
+                      <span id="biggestProdStonks" style="color: white; font-weight: 700">-</span>
+                    </h5>
+                    <h5>
+                      <span >next bailout</span>:
+                      <span id="biggestProdBailout" style="color: white; font-weight: 700">-</span>
+                    </h5>
+                  </div>
+                </div>
+                <div class="col-md-6 left">
+                  <div class="col-md-12 options"
+                    style="background-image: url(assets/img/money.png);background-position: center;padding:30px">
+                    <h3>
+                      <span >biggest spender</span>
+                      <p style="padding: 10px"><b id="biggestSpendName">-</b></p>
+                    </h3>
+                    <img id="spenderWojak" height="120" src="assets/img/spender-wojaks/faster.gif" width="auto"
+                      style="border-radius: 10px;">
+                    <h5 style="padding-top:15px">
+                      <span >spent</span>:
+                      <span id="biggestSpendAmount" style="color: white; font-weight: 700">-</span>
+                    </h5>
+                    <h5>
+                      <span >profit</span>:
+                      <span id="biggestSpendProfit" style="color: #ff1212; font-weight: 700">-</span>
+                    </h5>
+                    <h5>
+                      <span >next bailout</span>:
+                      <span id="biggestSpendBailout" style="color: white; font-weight: 700">-</span>
+                    </h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- chad & recent events-->
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6 right">
+                  <div class="col-md-12 options" style="background-image: url(assets/img/chadmoney.png);background-position: center;padding:30px">
+                    <div id="chadOverlay">
+                      <div id="text">
+                        <p style="font-size: 16px; padding: 0 20px;"><span >the chadbroker receives 1% of all buys and sells</span><br><br>
+                          <span >to become the chadbroker, you must have more brokered trades <i><b>and</b></i> more broker divs than the current chadbroker</span></p>
+                          <a class="btn btn-active" onclick="$( '#chadOverlay').hide();" role="button"
+                          style=" margin: 15px auto 0 auto;padding-top: 12px;width: 100%;">STONK!</a>
+                      </div>
+                    </div>
+                    <h3>
+                      the chadbroker
+                      <button type="button" class="btn btn-primary question" onclick="$( '#chadOverlay').show();">
+                        ?
+                      </button>
+                      <p style="padding: 10px"><b id="chadBrokerName">-</b></p>
+                    </h3>
+                    <div class="chadbg">
+                      <img class="justin-face" id="" height="120" src="assets/img/chad.png" width="auto">
+                    </div>
+                    <h5 style="padding-top:15px">
+                      <span >brokered trades</span>:
+                      <span id="chadTrades" style="color: white; font-weight: 700">-</span>
+                    </h5>
+                    <h5>
+                      <span >broker earnings</span>:
+                      <span id="chadBrokerDivs" style="color: white; font-weight: 700">-</span>
+                    </h5>
+                    <h5>
+                      <span >chadbroker earnings</span>:
+                      <span id="chadChadDivs" style="color: white; font-weight: 700">-</span>
+                    </h5>
+                  </div>
+                </div>
+                <div class="col-md-6 left">
+                  <div class="col-md-12 options"
+                    style="background-image: url(assets/img/events.png);background-position: center;padding:30px">
+                    <h3 >recent activity</h3>
+                    <table class="table recent" style="width:100%; margin-bottom: 10px; margin-top: 30px">
+                      <tr>
+                        <th >user</th>
+                        <th >type</th>
+                        <th >value</th>
+                      </tr>
+                      <tr>
+                        <td id="user1">-</td>
+                        <td id="col2-1">-</td>
+                        <td id="col3-1">-</td>
+                      </tr>
+                      <tr>
+                        <td id="user2">-</td>
+                        <td id="col2-2">-</td>
+                        <td id="col3-2">-</td>
+                      </tr>
+                      <tr>
+                        <td id="user3">-</td>
+                        <td id="col2-3">-</td>
+                        <td id="col3-3">-</td>
+                      </tr>
+                      <tr>
+                        <td id="user4">-</td>
+                        <td id="col2-4">-</td>
+                        <td id="col3-4">-</td>
+                      </tr>
+                      <tr>
+                        <td id="user5">-</td>
+                        <td id="col2-5">-</td>
+                        <td id="col3-5">-</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Sell & Reinvest -->
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6 right">
+                  <div class="col-md-12 options deal" style="height: 300px;">
+                    <div id="brokerWarning">
+                      <div id="text">
+                        <p style="font-size: 16px; padding: 0 20px;"><span >you are not using a broker!</span><br><br>
+                          <span >if you buy without a broker you will miss out on 5% cashback</span></p>
+                          <a class="btn btn-active" onclick="useFeatured()" role="button"
+                          style=" margin: 15px auto 0 auto;padding-top: 12px;width: 100%;">use featured broker</a>
+                          <a class="btn btn-active" onclick="iDontCare()" role="button"
+                          style=" margin: 15px auto 0 auto;padding-top: 12px;width: 100%;">I don't care</a>
+                      </div>
+                    </div>
+                    <div class="gameApprovalOverlay" style="display: none;">
+                      <div id="text">
+                        <a class="btn btn-active" onclick="approveGame()" role="button"
+                          style=" margin: auto;padding-top: 12px; font-size: 18px; font-size: 13px;width: 100%;">approval required</a>
+                      </div>
+                    </div>
+                    <div class="nameOverlay">
+                      <div id="text">
+                        <i class="fas fa-lock lock" style="margin-top: 0px;"></i>
+                        <h4  style="font-weight:700;margin-top: 15px;margin-bottom: 110px;">username required</h4>
+                      </div>
+                    </div>
+                    <div class="premarketOverlay">
+                      <div id="text">
+                        <i class="fas fa-lock lock" style="margin-top: 0px;"></i>
+                        <h4  style="font-weight:700;margin-top: 15px;margin-bottom: 110px;">pre-market</h4>
+                      </div>
+                    </div>
+                    <h3 >buy companies</h3>
+                    </br>
+                    <div class="spend-input" style="margin-bottom: 13px!important">
+                      <input id="buyInput"
+                        style="border-radius: 7px 0 0 7px!important; border-right: none; width: calc(100% - 100px);line-height: 20px"
+                        type="number" class="form-control" id="inputName" placeholder="100" maxlength="32"
+                        onkeyup="this.value = this.value.replace(/[^\.|0-9]/, '')" onkeydown="resetCheck()" inputmode="numeric" />
+                      <div class="input-group-append">
+                        <span class="input-group-text">USDT&nbsp;<img src="assets/img/tethericon.png" height="16"
+                            style="display: inline-flex!important; margin-top: -3px;" /></span>
+                      </div>
+                    </div>
+                    <a class="btn btn-lg btn-buy" onclick="buy()" 
+                    role="button">buy</a>
+                    <div class="col-md-12">
+                      <p class="col-md-12" style="font-size: 1.2em;padding-top:20px">
+                      <h5  style="line-height:30px">receive</h5>
+                      <h3 class="received"><span style="font-weight: 700; color: white;" id="buyAmount">-</span></h3>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 left">
+                  <div class="col-md-12 options brrr" style="padding:30px">
+                    <div id="companiesOverlay">
+                      <div id="text">
+                        <p style="font-size: 16px; padding: 0 20px;"><span >companies produce 1 stonk per second, or 86400 per day</span><br><br>
+                          <span >you receive 1 company for every 86400 stonks when reinvesting</span></p>
+                          <a class="btn btn-active" onclick="$( '#companiesOverlay').hide();" role="button"
+                          style=" margin: 15px auto 0 auto;padding-top: 12px;width: 100%;">got it</a>
+                      </div>
+                    </div>
+                    <div class="nameOverlay">
+                      <div id="text">
+                        <i class="fas fa-lock lock" style="margin-top: 0px;"></i>
+                        <h4  style="font-weight:700;margin-top: 15px;margin-bottom: 110px;">username required</h4>
+                      </div>
+                    </div>
+                    <div class="premarketOverlay">
+                      <div id="text">
+                        <i class="fas fa-lock lock" style="margin-top: 0px;"></i>
+                        <h4  style="font-weight:700;margin-top: 15px;margin-bottom: 110px;">pre-market</h4>
+                      </div>
+                    </div>
+                    <h3>
+                      <span >my companies</span> <button type="button" class="btn btn-primary question" onclick="$( '#companiesOverlay').show();">
+                        ?
+                      </button>
+                      <p style="padding: 10px"><b id="userCompanies">-</b></p>
+                    </h3>
+                    </br>
+                    </br>
+                    <p>
+                      <a class="btn btn-lg btn-buy" onclick="invest()" 
+                      role="button">reinvest</a>
+                    </p>
+                    <div class="col-md-12">
+                      <p class="col-md-12" style="font-size: 1.2em;padding-top:20px">
+                      <h5  style="line-height:30px">receive</h5>
+                      <h3 class="received"><span style="font-weight: 700; color: white;" id="investAmount">-</span>
+                      </h3>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- buy & bonus -->
+            <div class="container" style="padding:0px 14px 0 14px;">
+              <div class="row">
+                <div class="col-md-6 right">
+                  <div class="col-md-12 options down" style="padding:30px">
+                    <div class="nameOverlay">
+                      <div id="text">
+                        <i class="fas fa-lock lock" style="margin-top: 0px;"></i>
+                        <h4  style="font-weight:700;margin-top: 15px;margin-bottom: 110px;">username required</h4>
+                      </div>
+                    </div>
+                    <div class="premarketOverlay">
+                      <div id="text">
+                        <i class="fas fa-lock lock" style="margin-top: 0px;"></i>
+                        <h4  style="font-weight:700;margin-top: 15px;margin-bottom: 110px;">pre-market</h4>
+                      </div>
+                    </div>
+                    <h3>
+                      <span >my stonks</span>
+                      <p style="padding: 10px"><b id="userStonks">-</b></p>
+                    </h3>
+                    </br>
+                    </br>
+                    <p>
+                      <a class="btn btn-lg btn-sell" onclick="sell()" 
+                      role="button">sell</a>
+                    </p>
+                    <div class="col-md-12">
+                      <p class="col-md-12" style="font-size: 1.2em;padding-top:20px">
+                      <h5  style="line-height:30px">receive</h5>
+                      <h3 class="received"><span style="font-weight: 700; color: white;" id="sellAmount">-</span></h3>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 left">
+                  <div class="col-md-12 rech options">
+                    <h3>
+                      <span >available</span>
+                      <p style="padding: 10px"><b id="refBalance">-</b></p>
+                    </h3>
+                    </br>
+                    </br>
+                    <p>
+                      <a class="btn btn-lg btn-sell" onclick="withdrawBonus()" 
+                      role="button">withdraw</a>
+                    </p>
+                    <div class="col-md-12">
+                      <p class="col-md-12" style="font-size: 1.2em;padding-top:20px">
+                      <h5  id="cBrokerTitle" style="line-height:30px">current broker</h5>
+                      <h3 class="received"><span style="font-weight: 700; color: white;" id="currentBroker">-</span>
+                      </h3>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- referral link -->
+            <div class="container altcolor" id="refLinkSection"
+              style="background-image: url(assets/img/refer.png);background-position: center;background-size: cover;cursor: pointer"
+              onclick="copyBroker()">
+              <div class="brokerOverlay" style="display: block">
+                <div id="text">
+                  <h4 style="font-weight:700"><i class="fas fa-lock"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span >spend</span> <span
+                      id="brokerProg">$1000</span> more</h4>
+                </div>
+              </div>
+              <div>
+                <h5  id="brokerLinkTitle">stonkbroker link</h5>
+                <h3 style="margin-top:20px;color: #fff">https://ethstonks.finance/#/<span id="brokerLinkName"></span>
+                  &nbsp;&nbsp;<i class="fas fa-copy" style="color: #799fff"></i></h3>
+              </div>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6 right">
+                  <div class="col-md-12 user-round options" style="background-position: center; height: 23em;">
+                    <h3 id=""  style="line-height: 20px;font-size: 25px; margin-top:0;">player</h3>
+                    <h2 id="currentName" class="glowing-text"
+                      style="padding-bottom: 5px; padding-top:5px; line-height: 20px;font-size: 20px">-</h2>
+                    <div
+                      style="border: 1px solid #2c3893; margin-top: 20px; margin-bottom: 10px;border-radius: 7px; padding: 12px 15px 10px; background: rgba(15,22,68, .7);">
+                      <div style="display: flex; justify-content: space-between">
+                        <button id="statsB" type="button" class="btn stat-btn-inactive" data-toggle="price" data-target=""
+                          value="price" onclick="statsBack()">
+                          <i class="fas fa-angle-left"></i>
+                        </button>
+                        <h5 style="font-size: 15px; line-height: 26px;margin-bottom: 0px; color: white"><span >round</span> <span id="statsRnd">1</span></h5>
+                        <button id="statsF" type="button" class="btn stat-btn-inactive" data-toggle="fund" data-target=""
+                          value="fund" onclick="statsForward()">
+                          <i class="fas fa-angle-right"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <table class="bluetable table recent" style="width:100%; margin-top: 10px;">
+                      <tr>
+                        <th  style="color: #799fff">spent</th>
+                        <th  style="color: #799fff">earned</th>
+                        <th  style="color: #799fff">profit</th>
+                      </tr>
+                      <tr>
+                        <td id="totalSpent">-</td>
+                        <td id="totalEarned">-</td>
+                        <td id="totalProfit">-</td>
+                      </tr>
+                    </table>
+                    <table class="bluetable table recent" style="width:80%; margin-top: 5px;">
+                      <tr>
+                        <th  style="color: #799fff">gas spent</th>
+                        <th  style="color: #799fff">ref trades</th>
+                      </tr>
+                      <tr>
+                        <td id="totalGas">-</td>
+                        <td id="brokeredTrades">-</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+                <div class="col-md-6 left">
+                  <div class="col-md-12 user-alltime options" style="height: 23em;">
+                    <h3 id=""  style=" margin-top: 5px; line-height: 20px;font-size: 27px">earnings<a onclick="refreshStats()"><i class="far fa-sync-alt" style="font-size: 24px;color: #fff; opacity: 1;cursor:pointer;margin-left:12px;"></i></a></h3>
+                    <table class="table recent" style="width:100%; margin-bottom: 10px; margin-top: 13px">
+                      <tr>
+                        <th  style="color: #799fff">pre-market</th>
+                        <td id="pmDivs">-</td>
+                      </tr>
+                      <tr>
+                        <th  style="color: #799fff">stonks</th>
+                        <td id="stonkDivs">-</td>
+                      </tr>
+                      <tr>
+                        <th  style="color: #799fff">bailouts</th>
+                        <td id="bailoutDivs">-</td>
+                      </tr>
+                      <tr>
+                        <th  style="color: #799fff">cashback</th>
+                        <td id="cashbackDivs">-</td>
+                      </tr>
+                      <tr>
+                        <th  style="color: #799fff">referrals</th>
+                        <td id="brokerDivs">-</td>
+                      </tr>
+                      <tr>
+                        <th  style="color: #799fff">chadbroker</th>
+                        <td id="chadDivs">-</td>
+                      </tr>
+                      <tr>
+                        <th  style="color: #799fff">total</th>
+                        <td id="totalDivs">-</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <script src="assets/js/accordion-tabs.js"></script>
+            <input style="display:none;" type="text" value="" id="copyHolder">
+</body>
+
+</html>

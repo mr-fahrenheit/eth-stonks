@@ -1,0 +1,21 @@
+{
+  "name": "usdt-farm",
+  "version": "1.0.0",
+  "description": "tests for usdt-farm",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --no-timeouts",
+    "start-ganache": "ganache-cli -l 0xFFFFFFFFFF -a 100 -e 100000 -i 5777 -m 'despair upgrade tone blouse permit car pigeon cream force uniform slide modify'"
+  },
+  "author": "Mr F",
+  "license": "ISC",
+  "dependencies": {
+    "bignumber.js": "^9.0.0",
+    "chai": "^4.2.0",
+    "ganache-cli": "^6.6.0",
+    "mocha": "^6.2.0",
+    "solc": "^0.4.18",
+    "truffle": "^5.0.32",
+    "web3": "^1.2.1"
+  }
+}
