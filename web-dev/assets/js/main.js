@@ -526,6 +526,8 @@ function handleEvent(e) {
     marketHistory[index] = Number(result['market'])
     timeHistory[index] = Number(result['timestamp'])
     latestIndex = Math.max(index, latestIndex)
+
+    return
   } else if (e.event.includes('Buy')) {
     console.log(result)
     if (typeof(result.broker) == 'undefined') {
@@ -562,6 +564,8 @@ function handleEvent(e) {
   } else if (e.event === 'LogSell') {
     activityType = 'sell'
     activityValue = formatDollas(result.value)
+  } else {
+    return
   }
 
   if (!recentActivityExists) {
