@@ -548,12 +548,6 @@ function handleEvent(e) {
     activityType = 'buy'
     activityValue = formatDollas(result.value)
   } else if (e.event === 'NewBroker') {
-    recentActivity.unshift({
-      'name': result.name,
-      'col2': 'new',
-      'col3': 'broker',
-      'key': eventKey
-    })
     activityType = 'new'
     activityValue = 'broker'
   } else if (e.event === 'NewChad') {
