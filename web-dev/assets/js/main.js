@@ -504,10 +504,10 @@ function handleEvent(e) {
 
   let eventKey = Number(e.blockNumber.toString().padStart(9, '0') + e.transactionIndex.toString().padStart(3, '0') + e.logIndex.toString().padStart(4, '0'))
 
-  if(recentActivity.find(activity => activity.key === eventKey)) {
-    // Already got this one
-    return
-  }
+  let recentActivityExists = recentActivity.find(activity => activity.key === eventKey)
+  let recentBuyExists = recentBuys.find(buy => buy.key === eventKey)
+
+  let activityType, activityValue
 
   if(e.event === 'LogHistory') {
     if (Number(result.market) > latestMarket) {
@@ -537,58 +537,44 @@ function handleEvent(e) {
     if (!result.isBroker && !result.validBroker) {
       result.broker = '-'
     }
-    recentBuys.unshift({
-      'name': result.name,
-      'broker': result.broker,
-      'value': formatDollas(result.value),
-      'key': eventKey
-    })
-    recentActivity.unshift({
-      'name': result.name,
-      'col2': 'buy',
-      'col3': formatDollas(result.value),
-      'key': eventKey
-    })
-  } else if (e.event == 'NewPlayer') {
-    recentActivity.unshift({
-      'name': result.name,
-      'col2': 'reg',
-      'col3': 'name',
-      'key': eventKey
-    })
-  } else if (e.event == 'NewBroker') {
+    if (!recentBuyExists) {
+      recentBuys.unshift({
+        'name': result.name,
+        'broker': result.broker,
+        'value': formatDollas(result.value),
+        'key': eventKey
+      })
+    }
+    activityType = 'buy'
+    activityValue = formatDollas(result.value)
+  } else if (e.event === 'NewBroker') {
     recentActivity.unshift({
       'name': result.name,
       'col2': 'new',
       'col3': 'broker',
       'key': eventKey
     })
-  } else if (e.event == 'NewChad') {
+    activityType = 'new'
+    activityValue = 'broker'
+  } else if (e.event === 'NewChad') {
+    activityType = 'new'
+    activityValue = 'chad'
+  } else if (e.event === 'LogWithdraw') {
+    activityType = 'withdraw'
+    activityValue = formatDollas(result.value)
+  } else if (e.event === 'LogInvest') {
+    activityType = 'reinvest'
+    activityValue = formatDollas(result.value)
+  } else if (e.event === 'LogSell') {
+    activityType = 'sell'
+    activityValue = formatDollas(result.value)
+  }
+
+  if (!recentActivityExists) {
     recentActivity.unshift({
       'name': result.name,
-      'col2': 'new',
-      'col3': 'chad',
-      'key': eventKey
-    })
-  } else if (e.event == 'LogWithdraw') {
-    recentActivity.unshift({
-      'name': result.name,
-      'col2': 'withdraw',
-      'col3': formatDollas(result.value),
-      'key': eventKey
-    })
-  } else if (e.event == 'LogInvest') {
-    recentActivity.unshift({
-      'name': result.name,
-      'col2': 'reinvest',
-      'col3': formatDollas(result.value),
-      'key': eventKey
-    })
-  } else if (e.event == 'LogSell') {
-    recentActivity.unshift({
-      'name': result.name,
-      'col2': 'sell',
-      'col3': formatDollas(result.value),
+      'col2': activityType,
+      'col3': activityValue,
       'key': eventKey
     })
   }
