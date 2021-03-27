@@ -210,6 +210,7 @@ async function loadBroker () {
 
 function useFeatured() {
   window.localStorage.setItem('broker', JSON.stringify(g.featured))
+  currentBroker = g.featured
   $('#pmBrokerWarning').hide()
   $('#brokerWarning').hide()
 }
